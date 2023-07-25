@@ -59,17 +59,3 @@ export const createCellsRouter = (filename: string, dir: string) => {
     return router;
 
 }
-
-/*
-} catch (err) {
-      if (isLocalApiError(err)) {
-        if (err.code === "ENOENT") {
-          await fs.writeFile(fullPath, "[]", "utf-8");
-          res.send([]);
-        }
-      } else {
-        throw err;
-      }
-    }
-  });
-*/

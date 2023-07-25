@@ -11,6 +11,8 @@ export const serve = (
     
     const app = express();
 
+    app.use(createCellsRouter(filename, dir));
+
     if (useProxy) {
         app.use(createProxyMiddleware({
             target: 'http://localhost:3000',
@@ -22,7 +24,7 @@ export const serve = (
         app.use(express.static(path.dirname(packagePath)));
     }
 
-    app.use(createCellsRouter(filename, dir));
+    
 
 
     return new Promise<void>((resolve, reject) => {
