@@ -2,15 +2,23 @@
   "name": "jsnote-dmohindru",
   "version": "1.0.0",
   "description": "",
+  "bin": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "tsc --watch --preserveWatchOutput"
+    "start": "tsc --watch --preserveWatchOutput",
+    "prepublishOnly": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "commander": "^11.0.0",
-    "local-api": "^1.0.0"
+    "@jsnote-dmohindru/local-api": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.4.2",
