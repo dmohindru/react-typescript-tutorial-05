@@ -25,3 +25,13 @@ Parallel run all packages
 npm run start
 ```
 
+Publish package
+```shell
+lerna publish --no-push
+```
+
+Install all dependencies of sub packages
+```shell
+lerna bootstrap
+```
+
